@@ -16,8 +16,8 @@
   - [x] 2.6 Implementasi `scale_features(df, scaler)` — terapkan StandardScaler
   - [x] 2.7 Implementasi `preprocess_pipeline(input_dict, ohe, scaler, num_medians, cat_modes, feature_order)` — gabungkan semua langkah
 
-- [ ] 3. Ekstrak Training Code dan Simpan Artifact (`train_and_save.py` + `src/model.py`)
-  - [ ] 3.1 Implementasi `train_and_save.py`:
+- [-] 3. Ekstrak Training Code dan Simpan Artifact (`train_and_save.py` + `src/model.py`)
+  - [x] 3.1 Implementasi `train_and_save.py`:
     - Load `Phone_Addiction.csv`
     - Data cleaning (drop cols, fix Sleep_Hours, fix Gender, replace Unknown→NaN, cap Age>150, drop duplicates)
     - Train/test split (`test_size=0.2, random_state=284091`)
