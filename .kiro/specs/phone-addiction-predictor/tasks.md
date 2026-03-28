@@ -2,10 +2,10 @@
 
 ## Task List
 
-- [-] 1. Setup Struktur Proyek
+- [x] 1. Setup Struktur Proyek
   - [x] 1.1 Buat folder `phone-addiction-predictor/` dengan subfolder `src/` dan `models/`
-  - [-] 1.2 Buat file kosong: `app.py`, `src/__init__.py`, `src/preprocessing.py`, `src/model.py`, `train_and_save.py`
-  - [ ] 1.3 Buat file placeholder: `requirements.txt`, `README.md`, `.gitignore`
+  - [x] 1.2 Buat file kosong: `app.py`, `src/__init__.py`, `src/preprocessing.py`, `src/model.py`, `train_and_save.py`
+  - [x] 1.3 Buat file placeholder: `requirements.txt`, `README.md`, `.gitignore`
 
 - [ ] 2. Ekstrak Preprocessing Code (`src/preprocessing.py`)
   - [ ] 2.1 Implementasi `clean_sleep_hours(df)` — strip kutip, konversi ke float
