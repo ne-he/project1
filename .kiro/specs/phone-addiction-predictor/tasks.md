@@ -29,7 +29,7 @@
     - Train CatBoostRegressor dengan best params dari notebook
     - Simpan `models/catboost_model.cbm`, `models/scaler.pkl`, `models/encoders.pkl`
     - Print RMSE dan R² pada test set sebagai verifikasi
-  - [ ] 3.2 Implementasi `load_artifacts()` di `src/model.py` dengan `@st.cache_resource`
+  - [x] 3.2 Implementasi `load_artifacts()` di `src/model.py` dengan `@st.cache_resource`
   - [ ] 3.3 Implementasi `predict(model, processed_df)` di `src/model.py`
 
 - [ ] 4. Buat Aplikasi Streamlit (`app.py`)
