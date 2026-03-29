@@ -38,7 +38,7 @@
     - Seksi "Informasi Dasar": Age, Gender, Daily_Usage_Hours, Sleep_Hours, Weekend_Usage_Hours
     - Seksi "Aktivitas Smartphone": Phone_Checks_Per_Day, Apps_Used_Daily, Screen_Time_Before_Bed, Time_on_Social_Media, Time_on_Gaming, Time_on_Education, Phone_Usage_Purpose
     - Seksi "Kesehatan & Sosial": Anxiety_Level, Depression_Level, Self_Esteem, Interllectual_Performance, Social_Interactions, Exercise_Hours, Family_Communication
-  - [ ] 4.3 Hubungkan tombol "Prediksi" ke `preprocess_pipeline()` dan `predict()`
+  - [x] 4.3 Hubungkan tombol "Prediksi" ke `preprocess_pipeline()` dan `predict()`
   - [ ] 4.4 Tampilkan hasil prediksi: nilai numerik (2 desimal) + `st.progress` bar
   - [ ] 4.5 Tampilkan interpretasi kategorikal:
     - < 4.0 → `st.success` "Rendah – Penggunaan smartphone Anda tergolong sehat."

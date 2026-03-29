@@ -85,3 +85,38 @@ with st.form("prediction_form"):
 
     st.divider()
     submitted = st.form_submit_button("🔍 Prediksi", use_container_width=True)
+
+
+# ── prediction logic ──────────────────────────────────────────────────────────
+if submitted:
+    input_dict = {
+        "Age":                       float(age),
+        "Gender":                    gender,
+        "Daily_Usage_Hours":         float(daily_usage),
+        "Sleep_Hours":               float(sleep_hours),
+        "Interllectual_Performance": int(intellectual),
+        "Social_Interactions":       int(social_interactions),
+        "Exercise_Hours":            float(exercise_hours),
+        "Screen_Time_Before_Bed":    float(screen_before_bed),
+        "Phone_Checks_Per_Day":      int(phone_checks),
+        "Anxiety_Level":             int(anxiety),
+        "Depression_Level":          int(depression),
+        "Self_Esteem":               int(self_esteem),
+        "Apps_Used_Daily":           int(apps_daily),
+        "Time_on_Social_Media":      float(time_social_media),
+        "Time_on_Gaming":            float(time_gaming),
+        "Time_on_Education":         float(time_education),
+        "Phone_Usage_Purpose":       phone_purpose,
+        "Family_Communication":      int(family_comm),
+        "Weekend_Usage_Hours":       float(weekend_usage),
+    }
+
+    try:
+        processed = preprocess_pipeline(
+            input_dict, ohe, scaler, num_medians, cat_modes, feature_order
+        )
+        from src.model import predict as run_predict
+        prediction = run_predict(model, processed)
+    except Exception as e:
+        st.error(f"Terjadi error saat memproses input: {e}")
+        st.stop()
