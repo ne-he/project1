@@ -32,8 +32,8 @@
   - [x] 3.2 Implementasi `load_artifacts()` di `src/model.py` dengan `@st.cache_resource`
   - [x] 3.3 Implementasi `predict(model, processed_df)` di `src/model.py`
 
-- [ ] 4. Buat Aplikasi Streamlit (`app.py`)
-  - [ ] 4.1 Setup layout dasar: judul, deskripsi, import artifact via `load_artifacts()`
+- [-] 4. Buat Aplikasi Streamlit (`app.py`)
+  - [x] 4.1 Setup layout dasar: judul, deskripsi, import artifact via `load_artifacts()`
   - [ ] 4.2 Implementasi form input 19 fitur dalam 3 seksi:
     - Seksi "Informasi Dasar": Age, Gender, Daily_Usage_Hours, Sleep_Hours, Weekend_Usage_Hours
     - Seksi "Aktivitas Smartphone": Phone_Checks_Per_Day, Apps_Used_Daily, Screen_Time_Before_Bed, Time_on_Social_Media, Time_on_Gaming, Time_on_Education, Phone_Usage_Purpose
