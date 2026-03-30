@@ -46,8 +46,8 @@
     - ≥ 7.0 → `st.error` "Tinggi – Disarankan untuk mengurangi penggunaan smartphone."
   - [x] 4.6 Tambahkan error handling dengan `try/except` dan `st.error()` untuk kegagalan preprocessing/inferensi
 
-- [ ] 5. Setup Dependencies dan Dokumentasi
-  - [ ] 5.1 Tulis `requirements.txt` dengan versi yang kompatibel:
+- [x] 5. Setup Dependencies dan Dokumentasi
+  - [x] 5.1 Tulis `requirements.txt` dengan versi yang kompatibel:
     ```
     streamlit>=1.28.0
     catboost>=1.2.0
@@ -56,7 +56,7 @@
     numpy>=1.24.0
     joblib>=1.3.0
     ```
-  - [ ] 5.2 Tulis `.gitignore`:
+  - [x] 5.2 Tulis `.gitignore`:
     ```
     __pycache__/
     *.pyc
@@ -64,15 +64,15 @@
     *.egg-info/
     .DS_Store
     ```
-  - [ ] 5.3 Tulis `README.md` dengan:
+  - [x] 5.3 Tulis `README.md` dengan:
     - Deskripsi proyek
     - Instruksi instalasi: `pip install -r requirements.txt`
     - Instruksi training: `python train_and_save.py`
     - Instruksi menjalankan app: `streamlit run app.py`
     - Penjelasan singkat fitur input dan output
 
-- [ ] 6. Testing dan Verifikasi
-  - [ ] 6.1 Jalankan `train_and_save.py` dan verifikasi RMSE ≈ 0.362, R² ≈ 0.947 pada test set
+- [-] 6. Testing dan Verifikasi
+  - [x] 6.1 Jalankan `train_and_save.py` dan verifikasi RMSE ≈ 0.362, R² ≈ 0.947 pada test set
   - [ ] 6.2 Jalankan `streamlit run app.py` dan test dengan input default (nilai tengah dari range)
   - [ ] 6.3 Test edge cases:
     - `Daily_Usage_Hours = 0` (usage_zero_flag = 1, denom_usage = 1)
