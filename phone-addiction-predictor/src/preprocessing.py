@@ -95,25 +95,31 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
         high_gaming_x_sleep, social_media_x_anxiety
     """
     x = df.copy()
-    eps = 1e-3
+    eps = 1e-3  # small constant to prevent division by zero
 
+    # flag rows where phone is barely used
     x["usage_zero_flag"] = (x["Daily_Usage_Hours"] <= 0).astype(int)
 
+    # clip to 1 so we never divide by zero even when Daily_Usage_Hours=0
     denom_usage = x["Daily_Usage_Hours"].clip(lower=1)
     x["checks_per_hour"] = x["Phone_Checks_Per_Day"] / denom_usage
     x["apps_per_hour"] = x["Apps_Used_Daily"] / denom_usage
     x["screen_before_bed_ratio"] = x["Screen_Time_Before_Bed"] / denom_usage
 
+    # sleep-based ratios — eps prevents inf when Sleep_Hours=0
     x["usage_to_sleep_ratio"] = x["Daily_Usage_Hours"] / (x["Sleep_Hours"] + eps)
     x["late_screen_ratio"] = x["Screen_Time_Before_Bed"] / (x["Sleep_Hours"] + eps)
 
+    # social vs solo usage balance
     solo_usage = x["Time_on_Gaming"] + x["Time_on_Social_Media"]
     social_use = x["Family_Communication"] + x["Social_Interactions"]
     x["social_to_solo_ratio"] = social_use / (solo_usage + eps)
 
+    # mental health composite: positive self-esteem vs negative strain
     mental_strain = x["Anxiety_Level"] + x["Depression_Level"]
     x["resilience_gap"] = x["Self_Esteem"] - mental_strain / 2.0
 
+    # interaction terms
     x["high_gaming_x_sleep"] = x["Time_on_Gaming"] * x["Sleep_Hours"]
     x["social_media_x_anxiety"] = x["Time_on_Social_Media"] * x["Anxiety_Level"]
 
