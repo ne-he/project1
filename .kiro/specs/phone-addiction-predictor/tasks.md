@@ -78,5 +78,5 @@
     - `Daily_Usage_Hours = 0` (usage_zero_flag = 1, denom_usage = 1)
     - `Sleep_Hours` sangat kecil (eps mencegah division by zero)
     - Input dengan nilai minimum dan maksimum semua fitur
-  - [ ] 6.4 Verifikasi urutan kolom output preprocessor identik dengan `feature_order` dari artifact
+  - [x] 6.4 Verifikasi urutan kolom output preprocessor identik dengan `feature_order` dari artifact
   - [ ] 6.5 Perbaiki error yang ditemukan pada langkah 6.1–6.4
